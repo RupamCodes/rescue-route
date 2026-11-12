@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+ * Leaflet map chrome (light editorial theme)
+ * ------------------------------------------------------------------------- */
+.leaflet-container {
+  background: #e7e5e4;
+  font-family: inherit;
+}
+
+.editorial-map-tiles {
+  filter: saturate(0.18) contrast(0.95) brightness(1.03) sepia(0.06);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: #ffffff;
+  color: #1c1917;
+  border: 1px solid #e7e5e4;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+}
+
+.rr-marker {
+  background: transparent;
+  border: none;
+}
